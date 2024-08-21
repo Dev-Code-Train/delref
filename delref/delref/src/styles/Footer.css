@@ -1,0 +1,45 @@
+.footer{
+    text-decoration: none;
+    background: #333;
+    display: flex;
+    flex-direction: arrow;
+    align-items: center;
+    justify-content: space-around;
+    font-family: 'Nunito', sans-serif;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 500;
+    position: relative;
+    padding: 5px 10px;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.footer a {
+    text-decoration: none;
+    color: rgb(231, 209, 89);
+    font-size: 18px;
+    font-weight: 500;
+    position: relative;
+    padding: 5px 10px;
+    transition: color 0.3s ease, transform 0.3s ease;
+  }
+  
+.footer a::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: rgb(231, 209, 89);
+    transition: width 0.3s ease;
+  }
+  
+.footer a:hover::before {
+    width: 100%;
+  }
+  
+  .footer a:hover {
+    color: #f4e16e;
+    transform: translateY(-2px);
+  }
