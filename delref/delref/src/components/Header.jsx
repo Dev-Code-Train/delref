@@ -10,7 +10,7 @@ export const Header = () => {
     <body className='Header'>
         <img className='logo' src={Logo} alt="Business Logo" /> 
         <div className='selection'>
-            <Link to="About" smooth={true} duration={500}>
+            <Link to="Home" smooth={true} duration={500}>
              Sobre nosotros
             </Link>
             <Link to="Services" smooth={true} duration={500}>
@@ -19,7 +19,7 @@ export const Header = () => {
             <Link to="Projects" smooth={true} duration={500}>
               Proyectos
             </Link>
-            <Link to="footer" smooth={true} duration={500}>
+            <Link to="Footer" smooth={true} duration={500}>
             Contactanos
             </Link>
         </div>

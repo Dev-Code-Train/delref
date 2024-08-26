@@ -9,7 +9,7 @@
 
 /*   *****PAGES/HOME*****  */
 .sectionHome {
-    margin-top: 50px;
+    margin-top: 180px;
     padding: 20px;
     display: flex;
     align-items: center;
@@ -51,45 +51,37 @@
   
   .slogan {
       padding: 10px;
-      font-size: 0.9rem;
+      font-size: 1rem;
     }
   }
 /*   *****PAGES/ABOUT*****  */
 .about-section {
-    padding: 50px 20px;
-  }
-  
-  .about-container {
-    max-width: 800px;
-    margin: 0 auto;
-    text-align: center;
-  }
-  
-  .about-title {
-    font-size: 1.5rem;
-    margin-bottom: 20px;
-    font-weight: bold;
-  }
-  
-  .about-text {
-    font-size: 1rem;
-    line-height: 1.6;
-    margin-bottom: 15px;
-  }
-  
-  .about-container p {
-    margin-bottom: 20px;
-  }
-  
-  @media (min-width: 765px) {
-    .about-container {
-      text-align: left;
-    }
-  
-    .about-title {
-      text-align: left;
-    }
-  }
+  padding: 40px 20px;
+  align-items: center;
+}
+
+.about-container {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.about-title {
+  font-size: 2rem;
+  margin-bottom: 50px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.about-text {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+
+.about-container p {
+  margin-bottom: 20px;
+}
   
 
   /*   *****PAGES/SERVICES*****  */

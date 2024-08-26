@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import '../styles/index.css';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import { FaWhatsapp } from "react-icons/fa6";
 
 
 export const Services = () => {
@@ -51,6 +52,15 @@ export const Services = () => {
           <li>Limpiezas integrales, terminaciones de obra.</li>
           <li>Tejados, verdina.</li>
           <li>Pintura en Vertical.</li>
+        </ul>
+      </div>
+
+      <div className="service-category" data-aos="fade-right">
+        <h3 className="service-title">Trabajos Verticales</h3>
+        <ul className="service-list">
+          <li>Nuestros expertos  proporcionan acabados impecables y duraderos para cualquier superficie vertical. </li>
+          <li>Director Técnico: Antonio Martínez Bejarano.</li>
+          <li>Número de Contacto: 628636246 </li>
         </ul>
       </div>
     </section>

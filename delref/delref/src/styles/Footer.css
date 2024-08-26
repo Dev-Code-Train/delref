@@ -1,4 +1,4 @@
-.footer{
+.Footer{
     text-decoration: none;
     background: #333;
     display: flex;
@@ -13,7 +13,7 @@
     transition: color 0.3s ease, transform 0.3s ease;
 }
 
-.footer a {
+.Footer a {
     background: #333;
     text-decoration: none;
     color: rgb(231, 209, 89);
@@ -24,7 +24,7 @@
     transition: color 0.3s ease, transform 0.3s ease;
   }
   
-.footer a::before {
+.Footer a::before {
     content: '';
     position: absolute;
     bottom: 0;
@@ -35,11 +35,11 @@
     transition: width 0.3s ease;
   }
   
-.footer a:hover::before {
+.Footer a:hover::before {
     width: 100%;
   }
   
-  .footer a:hover {
+  .Footer a:hover {
     color: #f4e16e;
     transform: translateY(-2px);
   }
