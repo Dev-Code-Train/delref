@@ -5,7 +5,6 @@
     flex-direction: arrow;
     align-items: center;
     justify-content: space-around;
-    font-family: 'Nunito', sans-serif;
     text-decoration: none;
     font-size: 18px;
     font-weight: 500;
@@ -15,6 +14,7 @@
 }
 
 .footer a {
+    background: #333;
     text-decoration: none;
     color: rgb(231, 209, 89);
     font-size: 18px;
@@ -42,4 +42,21 @@
   .footer a:hover {
     color: #f4e16e;
     transform: translateY(-2px);
+  }
+
+  .social-icons {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .social-icon {
+    background: rgb(231, 209, 89);
+    color: rgb(231, 209, 89);
+    border-radius: 50%;
+    padding: 10px;
+    font-size: 24px;
+  }
+  
+  .social-icon:hover {
+    color: #fff;
   }

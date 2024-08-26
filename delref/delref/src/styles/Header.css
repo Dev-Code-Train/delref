@@ -1,31 +1,30 @@
 .Header{
     background: linear-gradient(to bottom, rgb(72, 62, 27), rgb(72, 62, 26));
-    height: 130px;
     color: rgb(231, 209, 89);
     display: flex;
     justify-content: space-between;
     align-items: center;
+    cursor: default;
 }
 .logo{
     height: 130px;
 }
 .selection{
     text-decoration: none;
-    width: 90%;
+    width: 100%;
+    background: linear-gradient(to bottom, rgb(72, 62, 27), rgb(72, 62, 26));
     display: flex;
     flex-direction: arrow;
     align-items: center;
     justify-content: space-around;
-    font-family: 'Nunito', sans-serif;
     text-decoration: none;
-    font-size: 18px;
-    font-weight: 500;
     position: relative;
     padding: 5px 10px;
     transition: color 0.3s ease, transform 0.3s ease;
 }
 
 .selection a {
+    background: linear-gradient(to bottom, rgb(72, 62, 27), rgb(72, 62, 26));
     text-decoration: none;
     color: rgb(231, 209, 89);
     font-size: 18px;
@@ -53,4 +52,30 @@
   .selection a:hover {
     color: #f4e16e;
     transform: translateY(-2px);
+  }
+
+  @media (max-width: 765px) {
+    .Header {
+      flex-direction: column;
+      padding: 5px;
+    }
+  
+    .logo {
+      height: 90px; /* Adjusted height for smaller screens */
+      margin-bottom: 10px;
+    }
+  
+    .selection {
+      flex-direction: row;
+      justify-content: space-around
+    }
+  
+    .selection a {
+      font-size: 16px; /* Slightly smaller font size */
+      padding: 8px 0;
+    }
+  
+    .selection a::before {
+      height: 1px; /* Thinner underline on hover */
+    }
   }
