@@ -56,7 +56,17 @@ export const Services = () => {
       </div>
 
       <div className="service-category" data-aos="fade-right">
-        <h3 className="service-title">Trabajos Verticales</h3>
+        <h3 className="service-title">Casas prefabricadas</h3>
+        <ul className="service-list">
+        <li>Diseño y planificación personalizada para casas de madera.</li>
+        <li>Fabricación y montaje de módulos prefabricados con madera de alta calidad.</li>
+        <li>Instalación de acabados interiores y exteriores, incluyendo suelos y revestimientos.</li>
+        <li>Asesoramiento completo en materiales y técnicas de construcción sostenible.</li>
+        </ul>
+      </div>
+
+      <div className="service-category" data-aos="fade-left">
+        <h3 className="service-title">Trabajos verticales</h3>
         <ul className="service-list">
           <li>Nuestros expertos  proporcionan acabados impecables y duraderos para cualquier superficie vertical. </li>
           <li>Director Técnico: Antonio Martínez Bejarano.</li>
