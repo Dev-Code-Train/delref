@@ -2,7 +2,6 @@ import React, { useEffect } from 'react';
 import '../styles/index.css';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
-import { FaWhatsapp } from "react-icons/fa6";
 
 
 export const Services = () => {

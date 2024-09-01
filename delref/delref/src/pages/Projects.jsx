@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 
@@ -31,13 +31,20 @@ import Kit1 from '../assets/Kitchen1.jpeg';
 import Kit2 from '../assets/Kitchen2.jpeg';
 import Kit3 from '../assets/Kitchen3.jpeg';
 
-
-
 export const Projects = () => {
+  const [expandedImage, setExpandedImage] = useState(null);
 
   useEffect(() => {
-    AOS.init({ duration: 1000 }); 
+    AOS.init({ duration: 1000 });
   }, []);
+
+  const handleImageClick = (image) => {
+    setExpandedImage(image);
+  };
+
+  const handleCloseModal = () => {
+    setExpandedImage(null);
+  };
 
   const projects = [
     {
@@ -65,56 +72,42 @@ export const Projects = () => {
       beforeImage: FloorBefore,
       afterImage: FloorAfter,
     },
-    // Agrega más proyectos según sea necesario
   ];
 
   const recentProjects = [
     {
-      title: 'Casas prefabricadas de madera',
-      images: [Wood1,
-              Wood2,
-              Wood3,
-              Wood4,
-              Wood5,]
+      title: 'Casas prefabricadas',
+      images: [Wood1, Wood2, Wood3, Wood4, Wood5],
     },
     {
       title: 'Baños',
-      images: [Bath1,
-              Bath2,
-              Bath3,
-              Bath4,
-              Bath5,]
+      images: [Bath1, Bath2, Bath3, Bath4, Bath5],
     },
     {
       title: 'Armarios',
-      images: [Bboard1,
-              Bboard2,
-              Bboard3,
-              Bboard4,]
+      images: [Bboard1, Bboard2, Bboard3, Bboard4],
     },
     {
       title: 'Cocinas',
-      images: [Kit1,
-              Kit2,
-              Kit3,]
+      images: [Kit1, Kit2, Kit3],
     },
-
-    // Añade más proyectos recientes según sea necesario
   ];
 
   return (
     <section className="projects-section" id="projects">
-      <h2 className="projects-title" data-aos="fade-up">Proyectos</h2>
+      <h2 className="projects-title" data-aos="fade-up">
+        Proyectos
+      </h2>
       <div className="projects-container">
         {projects.map((project, index) => (
           <div className="project-card" key={index} data-aos="fade-up" data-aos-delay={index * 200}>
             <h3 className="project-title">{project.title}</h3>
             <div className="project-images">
-              <div className="project-image before">
+              <div className="project-image before" onClick={() => handleImageClick(project.beforeImage)}>
                 <p>Antes</p>
                 <img src={project.beforeImage} alt={`Before ${project.title}`} />
               </div>
-              <div className="project-image after">
+              <div className="project-image after" onClick={() => handleImageClick(project.afterImage)}>
                 <p>Después</p>
                 <img src={project.afterImage} alt={`After ${project.title}`} />
               </div>
@@ -123,14 +116,16 @@ export const Projects = () => {
         ))}
       </div>
 
-      <h2 className="projects-title" data-aos="fade-up" style={{ marginTop: '50px' }}>Trabajos Recientes</h2>
+      <h2 className="projects-title" data-aos="fade-up" style={{ marginTop: '50px' }}>
+        Trabajos Recientes
+      </h2>
       <div className="recent-projects-container">
         {recentProjects.map((project, index) => (
           <div className="recent-project-card" key={index} data-aos="fade-up" data-aos-delay={index * 200}>
             <h3 className="recent-project-title">{project.title}</h3>
             <div className="recent-project-images">
               {project.images.map((image, imgIndex) => (
-                <div key={imgIndex} className="recent-project-image">
+                <div key={imgIndex} className="recent-project-image" onClick={() => handleImageClick(image)}>
                   <img src={image} alt={`${project.title} ${imgIndex + 1}`} />
                 </div>
               ))}
@@ -138,6 +133,17 @@ export const Projects = () => {
           </div>
         ))}
       </div>
+
+      {expandedImage && (
+        <div className="modal" onClick={handleCloseModal}>
+          <div className="modal-content" onClick={(e) => e.stopPropagation()}>
+            <span className="close" onClick={handleCloseModal}>&times;</span>
+            <img src={expandedImage} alt="Expanded view" className="modal-image" />
+          </div>
+        </div>
+      )}
     </section>
   );
-}
+};
+
+
