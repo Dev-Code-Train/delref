@@ -30,7 +30,9 @@ npm run dev
 # Project Structure
 
 ```bash
-todolist/
+/delref
+│
+└── delref
 ├── public/
 │   ├── favicon.ico
 │   └── index.html
